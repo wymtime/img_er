@@ -4,7 +4,8 @@ window.ImgEr = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    new ImgEr.Routers.Router();
+    Backbone.history.start();
   }
 };
 

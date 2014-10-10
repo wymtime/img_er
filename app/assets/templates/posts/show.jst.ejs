@@ -1,0 +1,12 @@
+<div class="post-info">
+	<h2><%= post.escape('title') %></h2>
+	<span id="username"> by <h3><%= post.escape('username') %></h3></span>
+	<img class="post-show-image" src="<%= post.escape('image_url') %>">
+	<div class="comments-container">
+		<div id="comment-form">
+			
+		</div>
+		<ul id="comment-list">
+		</ul>
+	</div>
+</div>

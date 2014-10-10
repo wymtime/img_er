@@ -36,9 +36,12 @@
 	          <a href="#" class="dropdown-toggle"
 			   data-toggle="dropdown"><%= current_user.username %><span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
+	            <!-- <li><a href="#">Action</a></li> -->
+	            <!-- <li><a href="#">Another action</a></li> -->
+  			  <li>
+  				  <a href="#" data-toggle="modal"
+  				   data-target=".upload-modal">upload image</a>
+  			  </li>
 	            <li class="divider"></li>
 	            <li><%= link_to "logout", session_url, method: :delete %></li>
 	          </ul>
@@ -97,6 +100,25 @@
 		<input type="password" name="user[password]" value="" id="password">
 
 	    <p><input type="submit" value="Sign in"></p>
+	  </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade upload-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+	  <h1>upload image</h1>
+	   <%= render "layouts/errors" %>
+	  <form action="<%= api_posts_url %>" method="post">
+  
+	    <label for="title">Title</label><br/>
+		<input type="text" name="post[title]" value="" id="title"><br/>
+	    <label for="url">Url</label><br/>
+		<input type="text" name="post[image_url]" value="" id="image_url"><br/>
+	    <label for="description">Description</label><br/>
+		<textarea name="post[description]" value="" id="description"></textarea><br/>
+	    <p><input type="submit" value="Add post"></p>
 	  </form>
     </div>
   </div>

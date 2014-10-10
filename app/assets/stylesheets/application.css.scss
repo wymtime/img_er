@@ -21,6 +21,35 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.container {
+    width: 900px;
+}
+
+.comment-form {
+    width: 400px;
+}
+
+.comment-item {
+    padding: 10px;
+    margin-top: 7px;
+    background-color: #181817;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 30px;
+}
+
+#main-content {
+    max-width: 1000px;
+    background-color: #2b2b2b;
+    margin: 0 auto;
+}
+
+.modal-content {
+    padding: 30px;
+}
+
 .navbar {
     background-color: #2b2b2b;
     border: 0px solid black;
@@ -30,4 +59,58 @@ body {
 
 .navbar > a {
     font-size: 1.05em;
+}
+
+.post-container {
+    width: 700px;
+    margin-top: 40px;
+    padding-top: 20px;
+    display: block;
+    margin: 0 auto;
+    background-color: #2b2b2b;
+    color: #ddddd1;
+}
+
+.post-image-thumb {
+    height: 160px;
+    width : 160px;
+    overflow: hidden;
+}
+
+.post-image {
+    height: 100%;
+}
+
+.post-info > h2 {
+    font-size: 18px;
+    margin: 0 auto;
+    padding-left: 26px;
+}
+
+.post-info > h3 {
+    font-size: 13px;
+    color: rgb(78, 118, 201);
+    margin: 0 auto;
+    padding-left: 26px;
+}
+
+.post-show-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.upload-modal {
+    
+}
+
+#username {
+    padding-left: 26px;
+    font-size: 13px;
+}
+
+#username > h3 {
+    font-size: 13px;
+    color: rgb(78, 118, 201);
+    margin: 0 auto;
+    display: inline;
 }
