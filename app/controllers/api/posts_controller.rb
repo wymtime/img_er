@@ -9,7 +9,7 @@ module Api
       @post = Post.find(params[:id])
       @post_author = User.find(@post.user_id)
       
-      render partial: "api/posts/post", locals: { post: @post, post_author: @post_author }
+      render "api/posts/show", locals: { post: @post, post_author: @post_author }
     end
     
     def create

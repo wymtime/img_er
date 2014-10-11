@@ -11,14 +11,15 @@ posts = Post.create([
   {title: 'Two', image_url: 'http://i.imgur.com/OKOZlU3.jpg', description: 'random pic 2', user_id: 1},
   {title: 'Three', image_url: 'http://i.imgur.com/trZxMHq.jpg', description: 'random pic 3', user_id: 1},
   {title: 'Four', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
-  {title: 'Four', image_url: 'http://i.imgur.com/v5oJzuq.jpg', description: 'random pic 4', user_id: 1},
-  {title: 'Four', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
-  {title: 'Four', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
-  {title: 'Four', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
-  {title: 'Four', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
-  {title: 'Four', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1}
+  {title: 'Five', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
+  {title: 'Six', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
+  {title: 'Seven', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
+  {title: 'Eight', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1},
+  {title: 'Nine', image_url: 'http://i.imgur.com/ye2iZSd.jpg', description: 'random pic 4', user_id: 1}
 ])
 
 posts.each do |post|
-  Comment.create({ body: "asdfasdfasdfasdf", user_id: 1, post_id: post.id })
+  4.times do |i|
+    Comment.create({ body: "asdfasdfasdfasdf#{i}", user_id: 1, post_id: post.id })
+  end
 end
